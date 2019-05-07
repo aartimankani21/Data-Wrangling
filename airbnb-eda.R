@@ -25,23 +25,18 @@ library(gridExtra)
 
 ## Loading Data
 
-listings <- read.csv("C:/Users/aarti/Downloads/listings.csv/airbnb_data/listingsnyc.csv", comment.char="#")
+## Download the data and enter the path here
 
-reviews <- read.csv("C:/Users/aarti/Downloads/listings.csv/airbnb_data/reviews.csv", comment.char="#")
-
-calendar <- read.csv("C:/Users/aarti/Downloads/listings.csv/calendar.csv/calendar.csv", comment.char="#")
-
-
+listings <- read.csv("../listingsnyc.csv", comment.char="#")
+reviews <- read.csv("../reviews.csv", comment.char="#")
 
 # Understanding the data
 
 nrow(reviews)
 nrow(listings)
-nrow(calendar)
 ncol(listings)
 names(listings)
 names(reviews)
-names(calendar)
 str(reviews)
 is.na(listings)
 is.na(reviews)
@@ -50,7 +45,6 @@ is.na(reviews)
 
 listings<- na.omit(listings)
 reviews<-na.omit(reviews)
-calendar <- na.omit(calendar)
 
 # Joining Reviews and Listings
 
